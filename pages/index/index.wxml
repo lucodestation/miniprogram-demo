@@ -1,0 +1,14 @@
+<!-- 
+  获取微信用户绑定的手机号，需先调用wx.login接口。
+  目前该接口针对非个人开发者，且完成了认证的小程序开放
+  可以使用测试号获取
+ -->
+<button open-type="getPhoneNumber" bindgetphonenumber="handleGetPhoneNumber">
+  getPhoneNumber
+</button>
+
+<button bindtap="handleGetUserInfo">
+  <rich-text nodes="<del>getUserInfo</del>"></rich-text>
+</button>
+
+<button bindtap="handleGetUserProfile">getUserProfile</button>
