@@ -1,0 +1,64 @@
+page {
+  background: #f0f0f0;
+  color: #444;
+}
+.poster-container {
+  background: #fff;
+  width: 650rpx;
+  margin: 30rpx auto;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.poster-container .goods-image {
+  width: 100%;
+  height: 320rpx;
+}
+.poster-container .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 20rpx 0;
+  padding: 0 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: 1.6;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.poster-container .avatar-qrcode {
+  margin-top: 30rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx 30rpx;
+}
+.poster-container .avatar-qrcode .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+.poster-container .price {
+  font-size: 32rpx;
+  color: red;
+  flex: 1;
+  margin-left: 30rpx;
+  line-height: 1.4;
+}
+.poster-container .avatar-qrcode .qrcode {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+}
+
+.canvas-wrap {
+  outline: 1px solid red;
+  padding: 20rpx;
+  margin: 20rpx;
+  position: absolute;
+  left: -9999px;
+}
+.canvas-wrap canvas {
+  outline: 1px solid #ccc;
+}

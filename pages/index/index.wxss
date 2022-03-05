@@ -1,0 +1,23 @@
+.container {
+  background: pink;
+  padding: 50rpx 0;
+}
+.item {
+  background: #fff;
+  margin: 30rpx 30rpx;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+}
+
+.item .icon-wrap {
+  margin-left: 30rpx;
+  width: 20rpx;
+  height: 12rpx;
+  background: pink;
+  display: flex;
+}
+.item .icon-wrap image {
+  width: 100%;
+  height: 100%;
+}

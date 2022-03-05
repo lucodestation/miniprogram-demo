@@ -12,3 +12,5 @@
 </button>
 
 <button bindtap="handleGetUserProfile">getUserProfile</button>
+
+<button bindtap="handleGoToPoster">poster</button>
