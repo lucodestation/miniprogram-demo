@@ -18,6 +18,7 @@ Page({
         extClass: 'delete-btn',
       },
     ],
+    inputValue: ''
   },
 
   handleClickList1Item(event) {

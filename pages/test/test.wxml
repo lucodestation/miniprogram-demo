@@ -45,3 +45,46 @@
 <mp-slideview buttons="{{ deleteButton }}" bindbuttontap="handleDeleteListItem">
   <mp-cell value="hehehehe" footer="123"></mp-cell>
 </mp-slideview>
+
+<rich-text nodes="<hr />"></rich-text>
+<rich-text nodes="<hr />"></rich-text>
+
+<view>简易双向绑定（不支持 trim 修饰符）</view>
+<text>inputValue: {{ inputValue }}</text>
+<input type="text" model:value="{{ inputValue }}" />
+
+<rich-text nodes="<hr />"></rich-text>
+<rich-text nodes="<hr />"></rich-text>
+
+<view>
+  <view>type="text"</view>
+  <input type="text" />
+</view>
+<view>
+  <view>type="number"</view>
+  <input type="number" />
+</view>
+<view>
+  <view>type="digit"</view>
+  <input type="digit" />
+</view>
+<view>
+  <view>type="idcard"</view>
+  <input type="idcard" />
+</view>
+<view>
+  <view>type="safe-password"</view>
+  <input type="safe-password" />
+</view>
+<view>
+  <view>type="nickname"</view>
+  <input type="nickname" />
+</view>
+<view>
+  <view>type="password"</view>
+  <input type="password" />
+</view>
+<view>
+  <text decode>&lt;input type="text" password /&gt;</text>
+  <input type="text" password />
+</view>

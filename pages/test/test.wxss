@@ -18,3 +18,8 @@
   background: green;
   font-size: 40rpx;
 }
+input {
+  margin: 30rpx;
+  padding: 0 20rpx;
+  border: 2rpx solid #ccc;
+}
