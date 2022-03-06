@@ -1,0 +1,20 @@
+.container1 {
+  background: pink;
+  border: 1px solid red;
+}
+.container1 .item {
+  margin: 10rpx 0;
+  background: #eee;
+  height: 180rpx;
+}
+.container1 .item-content {
+  background: yellowgreen;
+  height: 180rpx;
+  line-height: 180rpx;
+  padding: 0 30rpx;
+  position: relative;
+}
+.container1 .item-content .slideview .delete-btn {
+  background: green;
+  font-size: 40rpx;
+}

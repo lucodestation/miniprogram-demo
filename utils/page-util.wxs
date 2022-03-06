@@ -1,0 +1,81 @@
+/**
+ * 返回 xxxx-xx-xx 格式的日期
+ * @param dateMark 日期标识，如 2022-03-05 或时间戳 1646536729894
+ */
+var getYearMonthDate = function (dateMark) {
+  var dateObj = getDate(dateMark)
+  var year = dateObj.getFullYear()
+  var month = dateObj.getMonth() + 1 + ''
+  if (month.length < 2) {
+    month = '0' + month
+  }
+  var date = dateObj.getDate() + ''
+  if (date.length < 2) {
+    date = '0' + date
+  }
+  return year + '-' + month + '-' + date
+}
+/**
+ * 返回 xxxx年xx月xx日 格式的日期
+ * @param dateMark 日期标识，如 2022-03-05 或时间戳 1646536729894
+ */
+var getYearMonthDateZh = function (dateMark) {
+  var dateObj = getDate(dateMark)
+  var year = dateObj.getFullYear()
+  var month = dateObj.getMonth() + 1 + ''
+  if (month.length < 2) {
+    month = '0' + month
+  }
+  var date = dateObj.getDate() + ''
+  if (date.length < 2) {
+    date = '0' + date
+  }
+  return year + '年' + month + '月' + date + '日'
+}
+/**
+ * 返回 xx:xx:xx 格式的时分秒
+ * @param dateMark 日期标识，如 2022-03-05 或时间戳 1646536729894
+ */
+var getHoursMinutesSeconds = function (dateMark) {
+  var dateObj = getDate(dateMark)
+  var hours = dateObj.getHours() + ''
+  if (hours.length < 2) {
+    hours = '0' + hours
+  }
+  var minutes = dateObj.getMinutes() + ''
+  if (minutes.length < 2) {
+    minutes = '0' + minutes
+  }
+  var seconds = dateObj.getSeconds() + ''
+  if (seconds.length < 2) {
+    seconds = '0' + seconds
+  }
+  return hours + ':' + minutes + ':' + seconds
+}
+/**
+ * 返回 xx时xx分xx秒 格式的时分秒
+ * @param dateMark 日期标识，如 2022-03-05 或时间戳 1646536729894
+ */
+var getHoursMinutesSecondsZh = function (dateMark) {
+  var dateObj = getDate(dateMark)
+  var hours = dateObj.getHours() + ''
+  if (hours.length < 2) {
+    hours = '0' + hours
+  }
+  var minutes = dateObj.getMinutes() + ''
+  if (minutes.length < 2) {
+    minutes = '0' + minutes
+  }
+  var seconds = dateObj.getSeconds() + ''
+  if (seconds.length < 2) {
+    seconds = '0' + seconds
+  }
+  return hours + '时' + minutes + '分' + seconds + '秒'
+}
+
+module.exports = {
+  getYearMonthDate: getYearMonthDate,
+  getYearMonthDateZh: getYearMonthDateZh,
+  getHoursMinutesSeconds: getHoursMinutesSeconds,
+  getHoursMinutesSecondsZh: getHoursMinutesSecondsZh,
+}

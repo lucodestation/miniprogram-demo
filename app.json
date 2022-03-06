@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/index/index", "pages/poster/poster"],
+  "pages": ["pages/index/index", "pages/poster/poster", "pages/test/test"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -7,5 +7,8 @@
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
 }

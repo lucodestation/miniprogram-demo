@@ -7,6 +7,18 @@ Page({
     price: 2580,
     canvasWidth: 0,
     canvasHeight: 0,
+
+    showActionsheet: false,
+    groups: [
+      { text: '男', value: 1 },
+      { text: '女', value: 0 },
+    ],
+  },
+
+  handleOpenActionSheet() {
+    this.setData({
+      showActionsheet: true,
+    })
   },
 
   async handleDraw() {

@@ -1,15 +1,26 @@
 <view id="posterContainer" class="poster-container">
-  <image class="goods-image canvas-image" src="{{goodsImage}}" data-canvas-image="{{goodsImage}}"></image>
-  <view class="title ell2"><text class="canvas-text" data-canvas-text="{{title}}" data-line="{{2}}">{{title}}</text></view>
+  <image class="goods-image canvas-image" src="{{ goodsImage }}" data-canvas-image="{{ goodsImage }}"></image>
+  <view class="title ell2"
+    ><text class="canvas-text" data-canvas-text="{{ title }}" data-line="{{ 2 }}">{{ title }}</text></view
+  >
   <view class="avatar-qrcode">
     <image class="avatar canvas-image" src="/static/images/flower.jpg" data-canvas-image="/static/images/flower.jpg"></image>
-    <view class="price canvas-text" data-canvas-text="￥{{price}}">￥{{price}}</view>
-    <image class="qrcode canvas-image" src="{{qrcode}}" data-canvas-image="{{qrcode}}"></image>
+    <view class="price canvas-text" data-canvas-text="￥{{ price }}">￥{{ price }}</view>
+    <image class="qrcode canvas-image" src="{{ qrcode }}" data-canvas-image="{{ qrcode }}"></image>
   </view>
 </view>
 
 <button type="primary" bindtap="handleDraw">生成海报</button>
 
-<view class="canvas-wrap"><canvas id="myCanvas" canvas-id="myCanvas" type="2d" style="width: {{canvasWidth}}px; height: {{canvasHeight}}px;"></canvas></view>
+<button bindtap="handleOpenActionSheet">
+  <mp-icon icon="add" color="red" size="{{ 25 }}"></mp-icon>
+  打开 ActionSheet
+</button>
 
-<view class="empty" style="height: 100rpx;"></view>
+<mp-actionSheet bindactiontap="btnClick" show="{{ showActionsheet }}" actions="{{ groups }}"> </mp-actionSheet>
+
+<view class="canvas-wrap">
+  <canvas id="myCanvas" canvas-id="myCanvas" type="2d" :style="width: {{ canvasWidth }}px; height: {{ canvasHeight }}px;"></canvas>
+</view>
+
+<view class="empty" style="height: 100rpx"></view>

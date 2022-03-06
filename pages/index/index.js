@@ -62,7 +62,7 @@ Page({
 
   // 测试按钮
   handleGetUserInfo() {
-    console.log("测试按钮");
+    console.log('测试按钮')
     // wx.getUserInfo({
     //   success(result) {
     //     console.log('getUserInfo', result)
@@ -91,13 +91,18 @@ Page({
 
   handleGoToPoster() {
     wx.navigateTo({
-      url: "/pages/poster/poster",
-    });
+      url: '/pages/poster/poster',
+    })
+  },
+  handleGoToTest() {
+    wx.navigateTo({
+      url: '/pages/test/test',
+    })
   },
 
   // 生命周期函数--监听页面加载
   onLoad: function (options) {
-    console.log("/pages/index/index onLoad");
+    console.log('/pages/index/index onLoad')
   },
 
   // 生命周期函数--监听页面初次渲染完成
@@ -105,12 +110,12 @@ Page({
 
   // 生命周期函数--监听页面显示
   onShow: function () {
-    console.log("/pages/index/index onShow");
+    console.log('/pages/index/index onShow')
   },
 
   // 生命周期函数--监听页面隐藏
   onHide: function () {
-    console.log("/pages/index/index onHide");
+    console.log('/pages/index/index onHide')
   },
 
   // 生命周期函数--监听页面卸载
@@ -124,4 +129,4 @@ Page({
 
   // 用户点击右上角分享
   onShareAppMessage: function () {},
-});
+})

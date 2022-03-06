@@ -1,0 +1,47 @@
+<wxs module="pageUtil" src="../../utils/page-util.wxs"></wxs>
+
+<view>
+  <!-- 这样循环的不是 list1 数组，而是 ['l', 'i', 's', 't', '1'] 这个字符串数组 -->
+  <text wx:for="list1" wx:key="*this">{{ item }}</text>
+</view>
+
+<view>
+  <!-- 这样才是循环 list1 数组 -->
+  <!-- key 值 *this 表示 item 本身 -->
+  <text wx:for="{{ list1 }}" wx:key="*this">{{ item.label }}</text>
+</view>
+
+<view>
+  <!-- key 值 id 表示 item 上的属性 -->
+  <text wx:for="{{ list1 }}" wx:for-item="item" wx:for-index="index" wx:key="id" bindtap="handleClickList1Item" data-item="{{ item }}">{{ item.label }}</text>
+</view>
+
+<view>
+  <text wx:if="{{ status === 0 }}">待确认</text>
+  <text wx:elif="{{ status === 1 }}">待发货</text>
+  <text wx:elif="{{ status === 2 }}">待收货</text>
+  <text wx:elif="{{ status === 3 }}">待评价</text>
+  <text wx:else></text>
+</view>
+
+<view>
+  <text hidden="{{ !(status === 2) }}">2</text>
+  <text hidden="{{ !(status === 3) }}">3</text>
+</view>
+
+<view>{{ pageUtil.getYearMonthDateZh('2022-03-05') }}</view>
+<view>{{ pageUtil.getHoursMinutesSecondsZh(1646541223625) }}</view>
+
+<view class="container1">
+  <view class="item" wx:for="{{ list1 }}" wx:key="id">
+    <mp-slideview buttons="{{ deleteButton }}" bindbuttontap="handleDeleteListItem">
+      <view class="item-content">
+        {{ item.label }}
+      </view>
+    </mp-slideview>
+  </view>
+</view>
+
+<mp-slideview buttons="{{ deleteButton }}" bindbuttontap="handleDeleteListItem">
+  <mp-cell value="hehehehe" footer="123"></mp-cell>
+</mp-slideview>
